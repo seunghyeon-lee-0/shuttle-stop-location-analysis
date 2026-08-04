@@ -1,0 +1,115 @@
+# Project Results
+
+This project developed a data-driven shuttle bus operating plan to reduce traffic congestion during the Wonju Dancing Carnival.
+
+AHP was used to construct demand weights, while **MCLP** and **P-Median** were applied to evaluate public coverage and travel efficiency. The outputs of both models were then merged, and a Greedy Algorithm was used to remove redundant stops and derive the final shuttle stop and route plan.
+
+<br>
+
+---
+
+## 1. Final Proposal
+
+The final proposal selected **22 shuttle bus stops** and organized them into two service zones.
+
+- **Service Zone 1:** 15.7 km, approximately 35 minutes
+- **Service Zone 2:** 16 km, approximately 45 minutes
+- **Operating Strategy:** Flexible headways based on expected demand by time period
+
+<p align="center">
+  <img src="assets/images/final-results-2.png" alt="Final Shuttle Bus Operation Plan" width="900">
+</p>
+
+<br>
+
+---
+
+## 2. Shuttle Stop Location Selection
+
+Two location optimization models were applied to balance **demand coverage** and **user accessibility** within a limited number of shuttle stops.
+
+### MCLP
+
+MCLP incorporated AHP-based demand weights and selected stops that **maximized weighted demand coverage within a 400 m service radius**.
+
+### P-Median
+
+P-Median assigned each demand point to a selected stop and **minimized the total demand-weighted travel distance** between demand points and shuttle stops.
+
+<p align="center">
+  <img src="assets/images/results-1.png" alt="Comparison of MCLP and P-Median" width="900">
+</p>
+
+<br>
+
+<p align="center">
+  <img src="assets/images/results-2.png" alt="MCLP Methodology" width="900">
+</p>
+
+<br>
+
+<p align="center">
+  <img src="assets/images/results-3.png" alt="P-Median Methodology" width="900">
+</p>
+
+<br>
+
+---
+
+## 3. Candidate Integration and Final Stop Selection
+
+The MCLP and P-Median outputs were combined into a dataset of **43 candidate shuttle stops**.
+
+Candidates were ranked using AHP scores, demand coverage, distance efficiency, and whether they were selected by both models. A Greedy Algorithm then reduced spatial overlap and selected the final **22 shuttle stops**, balancing accessibility and operational efficiency.
+
+<p align="center">
+  <img src="assets/images/results-4.png" alt="Candidate Integration and Final Stop Selection" width="950">
+</p>
+
+<br>
+
+---
+
+## 4. Shuttle Bus Route Design
+
+The final stops were grouped according to service zones and spatial connectivity, resulting in **two circular shuttle bus routes** centered on the festival venue.
+
+- **Service Zone 1 Route:** Covers the western and northwestern areas of Wonju, totaling 15.7 km
+- **Service Zone 2 Route:** Covers the eastern and southeastern areas of Wonju, totaling 16 km
+
+The two routes connect all 22 selected stops while maintaining accessibility to the festival venue and minimizing unnecessary travel.
+
+<p align="center">
+  <img src="assets/images/results-5.png" alt="Final Shuttle Bus Routes" width="950">
+</p>
+
+<br>
+
+---
+
+## 5. Time-Based Headway Plan
+
+Instead of using a fixed schedule, the project proposed **flexible shuttle headways based on expected demand by time period**.
+
+Headways were shortened during peak demand periods and extended during lower-demand periods. This strategy was designed to reduce passenger waiting time while minimizing unnecessary vehicle operations.
+
+<p align="center">
+  <img src="assets/images/final-results-2.png" alt="Service Zone Routes and Time-Based Headway Plan" width="950">
+</p>
+
+<br>
+
+---
+
+## 6. Key Outcomes
+
+The project produced the following operational plan:
+
+- AHP-based demand weighting and location evaluation
+- Weighted demand coverage maximization using MCLP
+- Demand-to-stop distance minimization using P-Median
+- Integration of 43 candidates into 22 final shuttle stops
+- Design of two service-zone shuttle routes
+- Flexible headway planning based on time-dependent demand
+
+Overall, the proposed framework provides a data-driven shuttle bus system that balances **public coverage, user accessibility, spatial efficiency, and operational feasibility**.
