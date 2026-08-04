@@ -70,23 +70,6 @@ The analysis combines location weighting, stop selection, route clustering, and 
 <br>
 
 
-##🔍 Methodology
-
-### MCLP
-
-Selects shuttle stops that maximize passenger-demand coverage within a **400 m service radius**.
-
-<br>
-
-
-
-### P-Median
-
-Selects shuttle stops that minimize access distance while reflecting AHP-based location importance.
-
-<br>
-
-
 ---
 
 ## 📊 Results
