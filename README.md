@@ -33,6 +33,17 @@ Exploratory analysis showed that visitor mobility increased sharply during the f
 
 ---
 
+## 🎯 Project Objective
+
+- Select shuttle bus stops that maximize passenger-demand coverage
+- Minimize the distance between demand areas and selected shuttle stops
+- Organize the selected stops into efficient operating routes
+- Estimate time-based passenger demand and determine appropriate shuttle headways
+
+<br>
+
+---
+
 ## 📚 Data Sources
 
 - **SKT Mobility Data**: Administrative-district OD data and stay-population data used to analyze visitor movement and time-based demand
@@ -59,6 +70,7 @@ The analysis combines location weighting, stop selection, route clustering, and 
 <br>
 
 
+##🔍 Methodology
 
 ### MCLP
 
@@ -89,3 +101,30 @@ It also proposed time-based headways based on predicted passenger demand.
 <p align="center">
   <img src="images/final-results-2.png" alt="final-results" width="900">
 </p>
+
+---
+
+## 📁 Repository Structure
+
+```
+shuttle-stop-location-analysis/
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── config/
+│   └── location_pipeline.example.yaml  
+├── data/
+│   ├── make_sample_data.py              
+│   ├── generate_candidate_stops.py      
+│   └── *.csv                            
+├── src/
+│   ├── 00_preprocessing.py            
+│   ├── distance_utils.py             
+│   ├── validation.py                  
+│   ├── 01_mclp_location_selection.py   
+│   ├── 02_pmedian_location_selection.py 
+│   ├── 03_merge_location_candidates.py  
+│   ├── 04_greedy_candidate_reconciliation.py  
+│   └── run_location_pipeline.py      
+└── tests/                          
+```
