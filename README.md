@@ -1,115 +1,131 @@
-# Project Results
+# Location-Allocation-Based Shuttle Bus Route and Headway Optimization for a Regional Festival
 
-This project developed a data-driven shuttle bus operating plan to reduce traffic congestion during the Wonju Dancing Carnival.
+<br>
 
-AHP was used to construct demand weights, while **MCLP** and **P-Median** were applied to evaluate public coverage and travel efficiency. The outputs of both models were then merged, and a Greedy Algorithm was used to remove redundant stops and derive the final shuttle stop and route plan.
+🏆 **Excellence Award , 2024 BIG CONTEST**
+
+<br>
+<br>
+
+This project develops a data-driven shuttle bus planning framework for a **regional festival** experiencing temporary traffic congestion and parking shortages.
+
+The framework integrates **shuttle stop location optimization**, **route clustering**, and **time-based passenger demand forecasting** to determine where shuttle stops should be placed, how they should be organized into routes, and how frequently buses should operate.
+
+<br>
+
+[📊 Analysis Results](research_results.md)  
+[📑 Presentation Slides](bigcontest-presentation.pdf)
 
 <br>
 
 ---
 
-## 1. Final Proposal
+## 💡 Project Motivation
 
-The final proposal selected **22 shuttle bus stops** and organized them into two service zones.
+Regional festivals attract large numbers of visitors within a limited time and area, often causing traffic congestion, parking shortages, and reduced accessibility.
 
-- **Service Zone 1:** 15.7 km, approximately 35 minutes
-- **Service Zone 2:** 16 km, approximately 45 minutes
-- **Operating Strategy:** Flexible headways based on expected demand by time period
+Exploratory analysis showed a sharp increase in tourism-related mobility during the festival period and a high proportion of private vehicle use. The results indicated the need for a temporary shuttle bus network designed around actual visitor movement and transportation demand.
+
+<br>
+
+
+<br>
 
 <p align="center">
-  <img src="assets/images/final-results-2.png" alt="Final Shuttle Bus Operation Plan" width="900">
+  <img src="images/research procedure.png" alt="motivation" width="900">
 </p>
+
+
+---
+
+## 📚 Data Sources
+
+- **SKT Mobility Data**: Administrative-district OD data and stay-population data used to analyze visitor movement and time-based demand
+- **Local Government Open Data**: Population, bus stop, administrative-area, and tourist-attraction data used to evaluate candidate locations
+- **Transportation Card Big Data System**: Stop-level boarding and alighting data used to measure public transportation demand
+- **Ministry of Land, Infrastructure and Transport**: Administrative boundaries and cadastral data used for GIS-based distance and coverage analysis
+- **Ministry of the Interior and Safety**: Administrative-district codes used to integrate datasets
+- **Regional Economy Portal**: Festival-related social text data used to analyze perceptions of shuttle and parking services
 
 <br>
 
 ---
-
-## 2. Shuttle Stop Location Selection
-
-Two location optimization models were applied to balance **demand coverage** and **user accessibility** within a limited number of shuttle stops.
 
 ### MCLP
 
-MCLP incorporated AHP-based demand weights and selected stops that **maximized weighted demand coverage within a 400 m service radius**.
+The **Maximal Covering Location Problem** selects a limited number of shuttle stops while maximizing weighted demand covered within a **400 m service radius**.
+
+It was used to identify locations that could serve the largest possible number of potential passengers.
+
+<br>
 
 ### P-Median
 
-P-Median assigned each demand point to a selected stop and **minimized the total demand-weighted travel distance** between demand points and shuttle stops.
+The **P-Median model** selects a fixed number of stops while minimizing the total weighted distance between demand points and their assigned stops.
 
-<p align="center">
-  <img src="assets/images/results-1.png" alt="Comparison of MCLP and P-Median" width="900">
-</p>
+The objective function was modified to consider both access distance and AHP-based location importance.
 
-<br>
-
-<p align="center">
-  <img src="assets/images/results-2.png" alt="MCLP Methodology" width="900">
-</p>
 
 <br>
 
 <p align="center">
-  <img src="assets/images/results-3.png" alt="P-Median Methodology" width="900">
+  <img src="images/final-results.png" alt="Final Shuttle Bus Operation Plan" width="900">
 </p>
 
 <br>
 
----
+The final framework selected 22 stops with limited spatial overlap and organized them into two routes serving different areas around the festival venue.
 
-## 3. Candidate Integration and Final Stop Selection
-
-The MCLP and P-Median outputs were combined into a dataset of **43 candidate shuttle stops**.
-
-Candidates were ranked using AHP scores, demand coverage, distance efficiency, and whether they were selected by both models. A Greedy Algorithm then reduced spatial overlap and selected the final **22 shuttle stops**, balancing accessibility and operational efficiency.
-
-<p align="center">
-  <img src="assets/images/results-4.png" alt="Candidate Integration and Final Stop Selection" width="950">
-</p>
+Rather than applying a fixed timetable, the project proposed flexible headways based on predicted passenger demand throughout the day.
 
 <br>
 
 ---
 
-## 4. Shuttle Bus Route Design
+## 📁 Repository Structure
 
-The final stops were grouped according to service zones and spatial connectivity, resulting in **two circular shuttle bus routes** centered on the festival venue.
-
-- **Service Zone 1 Route:** Covers the western and northwestern areas of Wonju, totaling 15.7 km
-- **Service Zone 2 Route:** Covers the eastern and southeastern areas of Wonju, totaling 16 km
-
-The two routes connect all 22 selected stops while maintaining accessibility to the festival venue and minimizing unnecessary travel.
-
-<p align="center">
-  <img src="assets/images/results-5.png" alt="Final Shuttle Bus Routes" width="950">
-</p>
+```text
+regional-festival-shuttle-optimization/
+├── README.md
+├── research_results.md
+├── bigcontest-presentation.pdf
+├── requirements.txt
+├── LICENSE
+│
+├── images/
+│   ├── analysis-pipeline.png
+│   ├── location-optimization.png
+│   ├── route-clustering.png
+│   └── final-results.png
+│
+├── scripts/
+│   ├── 01_preprocess_mobility_data.py
+│   ├── 02_calculate_ahp_weights.py
+│   ├── 03_run_mclp.py
+│   ├── 04_run_pmedian.py
+│   ├── 05_select_final_stops.py
+│   ├── 06_cluster_routes.py
+│   ├── 07_forecast_demand.py
+│   └── run_pipeline.py
+│
+├── notebooks/
+│   ├── 01_exploratory_data_analysis.ipynb
+│   ├── 02_location_optimization.ipynb
+│   ├── 03_route_clustering.ipynb
+│   └── 04_demand_forecasting.ipynb
+│
+├── data/
+│   ├── raw/
+│   ├── reference/
+│   └── processed/
+│
+└── results/
+    ├── final_shuttle_stops.csv
+    ├── shuttle_routes.csv
+    ├── headway_plan.csv
+    └── figures/
+```
 
 <br>
 
 ---
-
-## 5. Time-Based Headway Plan
-
-Instead of using a fixed schedule, the project proposed **flexible shuttle headways based on expected demand by time period**.
-
-Headways were shortened during peak demand periods and extended during lower-demand periods. This strategy was designed to reduce passenger waiting time while minimizing unnecessary vehicle operations.
-
-<p align="center">
-  <img src="assets/images/final-results-2.png" alt="Service Zone Routes and Time-Based Headway Plan" width="950">
-</p>
-
-<br>
-
----
-
-## 6. Key Outcomes
-
-The project produced the following operational plan:
-
-- AHP-based demand weighting and location evaluation
-- Weighted demand coverage maximization using MCLP
-- Demand-to-stop distance minimization using P-Median
-- Integration of 43 candidates into 22 final shuttle stops
-- Design of two service-zone shuttle routes
-- Flexible headway planning based on time-dependent demand
-
-Overall, the proposed framework provides a data-driven shuttle bus system that balances **public coverage, user accessibility, spatial efficiency, and operational feasibility**.
