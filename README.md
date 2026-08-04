@@ -21,15 +21,15 @@ The framework integrates location-allocation models, route clustering, and passe
 
 Regional festivals attract large numbers of visitors within a limited time and area, often causing traffic congestion and parking shortages.
 
-Exploratory analysis showed that visitor mobility increased sharply during the festival period and that private vehicles accounted for a high proportion of travel. These findings indicated the need for a temporary shuttle bus network based on actual mobility patterns and transportation demand.
-
-<br>
 
 <p align="center">
   <img src="images/research procedure.png" alt="Project Motivation" width="900">
 </p>
 
 <br>
+
+Exploratory analysis showed that visitor mobility increased sharply during the festival period and that private vehicles accounted for a high proportion of travel. These findings indicated the need for a temporary shuttle bus network based on actual mobility patterns and transportation demand.
+
 
 ---
 
