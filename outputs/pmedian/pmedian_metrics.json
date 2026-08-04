@@ -1,0 +1,17 @@
+{
+  "solver_status": "Optimal",
+  "objective_value": 1754.817524956081,
+  "selected_stop_count": 22,
+  "total_demand_weight": 12.852629053069505,
+  "weighted_mean_distance_m": 136.53374089536882,
+  "unweighted_mean_distance_m": 194.9185260733031,
+  "max_distance_m": 937.4761866408124,
+  "p50_distance_m": 60.57475891612167,
+  "p75_distance_m": 339.8730341066944,
+  "p90_distance_m": 541.3751354755177,
+  "p95_distance_m": 629.6950327542758,
+  "share_within_400m": 0.7954545454545454,
+  "runtime_sec": 0.16591691970825195,
+  "sparse_restriction_used": true,
+  "nearest_candidate_k": null
+}

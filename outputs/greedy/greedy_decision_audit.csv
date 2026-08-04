@@ -1,0 +1,45 @@
+﻿step,candidate_id,action,reason,conflicting_stop_ids,score,selected_count_before,selected_count_after
+0,STOP_013,SELECTED_GREEDY,greedy selection by descending priority_score,,0.9574108143690904,0,1
+1,STOP_018,SELECTED_GREEDY,greedy selection by descending priority_score,,0.7991741608028664,1,2
+2,STOP_017,SELECTED_GREEDY,greedy selection by descending priority_score,,0.7958448229344225,2,3
+3,STOP_014,SELECTED_GREEDY,greedy selection by descending priority_score,,0.6564682216575639,3,4
+4,STOP_030,SELECTED_GREEDY,greedy selection by descending priority_score,,0.6455713285252208,4,5
+5,STOP_002,SELECTED_GREEDY,greedy selection by descending priority_score,,0.5724256158860132,5,6
+6,STOP_022,SELECTED_GREEDY,greedy selection by descending priority_score,,0.5550167107502809,6,7
+7,STOP_015,SELECTED_GREEDY,greedy selection by descending priority_score,,0.5495333952011522,7,8
+8,STOP_021,SELECTED_GREEDY,greedy selection by descending priority_score,,0.5353956640764918,8,9
+9,STOP_044,SELECTED_GREEDY,greedy selection by descending priority_score,,0.5185749421991965,9,10
+10,STOP_039,SELECTED_GREEDY,greedy selection by descending priority_score,,0.5111026644761903,10,11
+11,STOP_041,SELECTED_GREEDY,greedy selection by descending priority_score,,0.4867959504106565,11,12
+12,STOP_001,SELECTED_GREEDY,greedy selection by descending priority_score,,0.4866285671393904,12,13
+13,STOP_025,SELECTED_GREEDY,greedy selection by descending priority_score,,0.4009089555830109,13,14
+14,STOP_037,SELECTED_GREEDY,greedy selection by descending priority_score,,0.34629209954851,14,15
+15,STOP_028,REJECTED_DISTANCE_CONFLICT,177.0m from an already-selected stop (min_stop_spacing_m=400m),STOP_025,0.3404565284121759,15,15
+16,STOP_042,SELECTED_GREEDY,greedy selection by descending priority_score,,0.33472280147348943,15,16
+17,STOP_035,SELECTED_GREEDY,greedy selection by descending priority_score,,0.3238268563320911,16,17
+18,STOP_036,SELECTED_GREEDY,greedy selection by descending priority_score,,0.30440414917756636,17,18
+19,STOP_043,SELECTED_GREEDY,greedy selection by descending priority_score,,0.29691812731467104,18,19
+20,STOP_016,REJECTED_DISTANCE_CONFLICT,280.8m from an already-selected stop (min_stop_spacing_m=400m),STOP_015,0.2819976001853405,19,19
+21,STOP_011,REJECTED_DISTANCE_CONFLICT,383.7m from an already-selected stop (min_stop_spacing_m=400m),STOP_013,0.27612351034082855,19,19
+22,STOP_012,REJECTED_DISTANCE_CONFLICT,253.3m from an already-selected stop (min_stop_spacing_m=400m),STOP_015,0.26794648775076213,19,19
+23,STOP_008,REJECTED_DISTANCE_CONFLICT,199.6m from an already-selected stop (min_stop_spacing_m=400m),STOP_013,0.25084941764477553,19,19
+24,STOP_004,REJECTED_DISTANCE_CONFLICT,241.2m from an already-selected stop (min_stop_spacing_m=400m),STOP_017,0.2354233694604202,19,19
+25,STOP_019,SELECTED_GREEDY,greedy selection by descending priority_score,,0.228819574653418,19,20
+26,STOP_034,REJECTED_DISTANCE_CONFLICT,355.6m from an already-selected stop (min_stop_spacing_m=400m),STOP_036,0.2195314566012587,20,20
+27,STOP_023,REJECTED_DISTANCE_CONFLICT,334.6m from an already-selected stop (min_stop_spacing_m=400m),STOP_019,0.2091105412032495,20,20
+28,STOP_033,REJECTED_DISTANCE_CONFLICT,359.2m from an already-selected stop (min_stop_spacing_m=400m),STOP_035,0.2077892147923947,20,20
+29,STOP_024,SELECTED_GREEDY,greedy selection by descending priority_score,,0.18106630034504145,20,21
+30,STOP_005,SELECTED_GREEDY,greedy selection by descending priority_score,,0.1560423071579803,21,22
+31,STOP_006,REJECTED_TARGET_REACHED,target_stop_count reached,,0.1501866844555919,22,22
+32,STOP_003,REJECTED_TARGET_REACHED,target_stop_count reached,,0.14541152516898956,22,22
+33,STOP_040,REJECTED_TARGET_REACHED,target_stop_count reached,,0.14520954094707678,22,22
+34,STOP_038,REJECTED_TARGET_REACHED,target_stop_count reached,,0.133294408849585,22,22
+35,STOP_020,REJECTED_TARGET_REACHED,target_stop_count reached,,0.10161361532971125,22,22
+36,STOP_009,REJECTED_TARGET_REACHED,target_stop_count reached,,0.1014259863853689,22,22
+37,STOP_010,REJECTED_TARGET_REACHED,target_stop_count reached,,0.0996075132311004,22,22
+38,STOP_029,REJECTED_TARGET_REACHED,target_stop_count reached,,0.099051132783756,22,22
+39,STOP_032,REJECTED_TARGET_REACHED,target_stop_count reached,,0.097606823473387,22,22
+40,STOP_026,REJECTED_TARGET_REACHED,target_stop_count reached,,0.09542949468261915,22,22
+41,STOP_007,REJECTED_TARGET_REACHED,target_stop_count reached,,0.08850182165721834,22,22
+42,STOP_027,REJECTED_TARGET_REACHED,target_stop_count reached,,0.07055876034555755,22,22
+43,STOP_031,REJECTED_TARGET_REACHED,target_stop_count reached,,0.0,22,22

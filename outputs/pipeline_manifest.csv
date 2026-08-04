@@ -1,0 +1,5 @@
+﻿stage,status,output
+mclp,SUCCESS,outputs/mclp/mclp_metrics.json
+pmedian,SUCCESS,outputs/pmedian/pmedian_metrics.json
+merge,SUCCESS,outputs/merged/merge_metrics.json
+greedy,SUCCESS,outputs/greedy/greedy_metrics.json

@@ -1,0 +1,11 @@
+{
+  "mclp_selected_count": 22,
+  "pmedian_selected_count": 22,
+  "unique_candidate_count": 44,
+  "selected_by_both_count": 14,
+  "mclp_only_count": 8,
+  "pmedian_only_count": 8,
+  "merge_conflict_count": 0,
+  "coordinate_match_count": 0,
+  "exact_id_match_count": 44
+}

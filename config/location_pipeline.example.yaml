@@ -1,0 +1,70 @@
+paths:
+  demand_csv: "data/candidate_stops_sample.csv"
+  candidate_csv: "data/candidate_stops_sample.csv"
+  ahp_csv: null
+  output_dir: "outputs"
+
+columns:
+  demand:
+    id: "candidate_id"
+    latitude: "latitude"
+    longitude: "longitude"
+    weight: "demand_weight"
+    district: "district"
+  candidate:
+    id: "candidate_id"
+    name: "candidate_name"
+    latitude: "latitude"
+    longitude: "longitude"
+    district: "district"
+  ahp:
+    id: "candidate_id"
+    score: "ahp_score"
+    features: ["인구밀집도_norm", "총_유동인구수_norm", "관광객방문수_norm", "승하차수_norm"]
+
+distance:
+  method: "haversine"
+  mclp_coverage_radius_m: 400
+  greedy_min_stop_spacing_m: 400
+
+optimization:
+  target_stop_count: 22
+  solver: "CBC"
+  time_limit_sec: 300
+  mip_gap: null
+  random_seed: 42
+
+constraints:
+  must_include_stop_ids: []
+  must_exclude_stop_ids: []
+  minimum_one_per_district: false
+  district_minimums: {}
+  district_maximums: {}
+
+pmedian:
+  max_assignment_distance_m: null
+  nearest_candidate_k: null
+  capacity_col: null
+
+greedy:
+  score_mode: "weighted_components"
+  existing_score_col: "preliminary_priority_score"
+  priority_weights:
+    ahp_score_norm: 0.50
+    mclp_coverage_norm: 0.20
+    pmedian_distance_quality_norm: 0.20
+    selected_by_both: 0.10
+  tie_break_columns:
+    - "priority_score:desc"
+    - "selected_by_both:desc"
+    - "ahp_score:desc"
+    - "mclp_coverage_norm:desc"
+    - "pmedian_distance_quality_norm:desc"
+    - "candidate_id:asc"
+  repair_max_iterations: 100
+  forced_conflict_policy: "error"
+
+runtime:
+  resume: false
+  save_distance_matrix: false
+  log_level: "INFO"

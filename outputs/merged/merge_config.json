@@ -1,0 +1,22 @@
+{
+  "mclp_csv": "outputs/mclp/mclp_selected_stops.csv",
+  "pmedian_csv": "outputs/pmedian/pmedian_selected_stops.csv",
+  "original_candidate_csv": "data/candidate_stops_sample.csv",
+  "ahp_csv": null,
+  "id_col": "candidate_id",
+  "name_col": "candidate_name",
+  "lat_col": "latitude",
+  "lon_col": "longitude",
+  "district_col": "district",
+  "ahp_score_col": "ahp_score",
+  "enable_coordinate_fuzzy_match": false,
+  "coordinate_match_tolerance_m": 20.0,
+  "priority_weights": {
+    "selected_by_both_bonus": 0.1,
+    "mclp_coverage_norm_weight": 0.2,
+    "pmedian_distance_quality_norm_weight": 0.2,
+    "ahp_score_norm_weight": 0.5
+  },
+  "compute_preliminary_priority": true,
+  "output_dir": "outputs/merged"
+}

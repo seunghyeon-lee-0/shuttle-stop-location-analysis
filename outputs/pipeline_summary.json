@@ -1,0 +1,18 @@
+{
+  "input_file_hashes": {
+    "demand_csv": "ec8c6dad904fc3bfb2b3b57e528ce5b0f3e89abee9b9c44c2fad545cf22991f8",
+    "candidate_csv": "ec8c6dad904fc3bfb2b3b57e528ce5b0f3e89abee9b9c44c2fad545cf22991f8"
+  },
+  "config_file_hash": "3e193bb2d9f0bf1359790d5cfcc26a902238c0f4969db2d2aba8010760fcafb0",
+  "start_time": "2026-07-28T02:54:41",
+  "python_version": "3.7.16",
+  "pulp_version": "2.7.0",
+  "mclp_status": "SUCCESS",
+  "pmedian_status": "SUCCESS",
+  "merge_status": "SUCCESS",
+  "greedy_status": "SUCCESS",
+  "final_selected_stop_count": 22,
+  "final_output_path": "outputs/greedy/greedy_final_selected_stops.csv",
+  "end_time": "2026-07-28T02:54:42",
+  "total_runtime_sec": 0.481644868850708
+}

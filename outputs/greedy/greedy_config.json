@@ -1,0 +1,35 @@
+{
+  "combined_csv": "outputs/merged/combined_candidate_stops.csv",
+  "id_col": "candidate_id",
+  "name_col": "candidate_name",
+  "lat_col": "latitude",
+  "lon_col": "longitude",
+  "district_col": "district",
+  "target_stop_count": 22,
+  "min_stop_spacing_m": 400,
+  "distance_method": "haversine",
+  "score_mode": "weighted_components",
+  "existing_score_col": "preliminary_priority_score",
+  "priority_weights": {
+    "ahp_score_norm": 0.5,
+    "mclp_coverage_norm": 0.2,
+    "pmedian_distance_quality_norm": 0.2,
+    "selected_by_both": 0.1
+  },
+  "tie_break_columns": [
+    "priority_score:desc",
+    "selected_by_both:desc",
+    "ahp_score:desc",
+    "mclp_coverage_norm:desc",
+    "pmedian_distance_quality_norm:desc",
+    "candidate_id:asc"
+  ],
+  "must_include_stop_ids": [],
+  "must_exclude_stop_ids": [],
+  "forced_conflict_policy": "error",
+  "minimum_one_per_district": false,
+  "district_minimums": {},
+  "district_maximums": {},
+  "repair_max_iterations": 100,
+  "output_dir": "outputs/greedy"
+}

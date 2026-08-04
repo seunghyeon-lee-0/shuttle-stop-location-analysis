@@ -1,0 +1,23 @@
+{
+  "target_stop_count": 22,
+  "final_selected_count": 22,
+  "min_stop_spacing_m": 400,
+  "minimum_pairwise_selected_distance_m": 415.12321954877183,
+  "selected_by_both_count": 14,
+  "mclp_selected_count": 17,
+  "pmedian_selected_count": 19,
+  "district_counts": {
+    "단구동": 3,
+    "개운동": 0,
+    "명륜동": 5,
+    "단계동": 4,
+    "무실동": 2,
+    "반곡관설동": 3,
+    "지정면": 5
+  },
+  "district_minimum_satisfied": true,
+  "district_maximum_satisfied": true,
+  "repair_iteration_count": 0,
+  "runtime_sec": 0.014796972274780273,
+  "status": "SUCCESS"
+}
