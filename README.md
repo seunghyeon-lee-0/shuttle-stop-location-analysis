@@ -101,10 +101,6 @@ The objective function was modified to jointly consider access distance and AHP-
 
 <br>
 
-<p align="center">
-  <img src="images/final-results-2.png" alt="final-results" width="900">
-</p>
-
 
 ---
 
