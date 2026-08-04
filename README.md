@@ -1,15 +1,12 @@
 # Location-Allocation-Based Shuttle Bus Route and Headway Optimization for a Regional Festival
 
-<br>
-
-🏆 **Excellence Award , 2024 BIG CONTEST**
+🏆 **Excellence Award, 2024 BIG CONTEST**
 
 <br>
-<br>
 
-This project develops a data-driven shuttle bus planning framework for a **regional festival** experiencing temporary traffic congestion and parking shortages.
+This project develops a data-driven shuttle bus planning framework to address traffic congestion, parking shortages, and limited accessibility during a regional festival.
 
-The framework integrates **shuttle stop location optimization**, **route clustering**, and **time-based passenger demand forecasting** to determine where shuttle stops should be placed, how they should be organized into routes, and how frequently buses should operate.
+The framework integrates location-allocation models, route clustering, and passenger demand forecasting to optimize shuttle stop locations, operating routes, and time-based headways.
 
 <br>
 
@@ -22,110 +19,75 @@ The framework integrates **shuttle stop location optimization**, **route cluster
 
 ## 💡 Project Motivation
 
-Regional festivals attract large numbers of visitors within a limited time and area, often causing traffic congestion, parking shortages, and reduced accessibility.
+Regional festivals attract large numbers of visitors within a limited time and area, often causing traffic congestion and parking shortages.
 
-Exploratory analysis showed a sharp increase in tourism-related mobility during the festival period and a high proportion of private vehicle use. The results indicated the need for a temporary shuttle bus network designed around actual visitor movement and transportation demand.
-
-<br>
-
+Exploratory analysis showed that visitor mobility increased sharply during the festival period and that private vehicles accounted for a high proportion of travel. These findings indicated the need for a temporary shuttle bus network based on actual mobility patterns and transportation demand.
 
 <br>
 
 <p align="center">
-  <img src="images/research procedure.png" alt="motivation" width="900">
+  <img src="images/research procedure.png" alt="Project Motivation" width="900">
 </p>
 
+<br>
 
 ---
 
 ## 📚 Data Sources
 
 - **SKT Mobility Data**: Administrative-district OD data and stay-population data used to analyze visitor movement and time-based demand
-- **Local Government Open Data**: Population, bus stop, administrative-area, and tourist-attraction data used to evaluate candidate locations
+- **Local Government Open Data**: Population, bus stop, tourist-attraction, and administrative-area data used to evaluate candidate locations
 - **Transportation Card Big Data System**: Stop-level boarding and alighting data used to measure public transportation demand
 - **Ministry of Land, Infrastructure and Transport**: Administrative boundaries and cadastral data used for GIS-based distance and coverage analysis
 - **Ministry of the Interior and Safety**: Administrative-district codes used to integrate datasets
-- **Regional Economy Portal**: Festival-related social text data used to analyze perceptions of shuttle and parking services
+- **Regional Economy Portal**: Festival-related social text data used to examine perceptions of shuttle and parking services
 
 <br>
 
 ---
 
-### MCLP
+## 🗂️ Analysis Procedure
 
-The **Maximal Covering Location Problem** selects a limited number of shuttle stops while maximizing weighted demand covered within a **400 m service radius**.
-
-It was used to identify locations that could serve the largest possible number of potential passengers.
+The analysis combines location weighting, stop selection, route clustering, and demand forecasting to develop an integrated shuttle bus operation plan for a regional festival.
 
 <br>
 
+<p align="center">
+  <img src="images/analsis-pipeline.png" alt="Analysis Pipeline" width="900">
+</p>
+
+<br>
+
+
+
+### MCLP
+
+Selects shuttle stops that maximize passenger-demand coverage within a **400 m service radius**.
+
+<br>
+
+
+
 ### P-Median
 
-The **P-Median model** selects a fixed number of stops while minimizing the total weighted distance between demand points and their assigned stops.
+Selects shuttle stops that minimize access distance while reflecting AHP-based location importance.
 
-The objective function was modified to consider both access distance and AHP-based location importance.
+<br>
+
+---
+
+
+---
+
+## 📊 Results
+
+The final framework selected **22 shuttle stops** and organized them into **two routes** serving different areas around the festival venue.
+
+It also proposed time-based headways based on predicted passenger demand.
 
 
 <br>
 
 <p align="center">
-  <img src="images/final-results.png" alt="Final Shuttle Bus Operation Plan" width="900">
+  <img src="images/final-results-2.png" alt="final-results" width="900">
 </p>
-
-<br>
-
-The final framework selected 22 stops with limited spatial overlap and organized them into two routes serving different areas around the festival venue.
-
-Rather than applying a fixed timetable, the project proposed flexible headways based on predicted passenger demand throughout the day.
-
-<br>
-
----
-
-## 📁 Repository Structure
-
-```text
-regional-festival-shuttle-optimization/
-├── README.md
-├── research_results.md
-├── bigcontest-presentation.pdf
-├── requirements.txt
-├── LICENSE
-│
-├── images/
-│   ├── analysis-pipeline.png
-│   ├── location-optimization.png
-│   ├── route-clustering.png
-│   └── final-results.png
-│
-├── scripts/
-│   ├── 01_preprocess_mobility_data.py
-│   ├── 02_calculate_ahp_weights.py
-│   ├── 03_run_mclp.py
-│   ├── 04_run_pmedian.py
-│   ├── 05_select_final_stops.py
-│   ├── 06_cluster_routes.py
-│   ├── 07_forecast_demand.py
-│   └── run_pipeline.py
-│
-├── notebooks/
-│   ├── 01_exploratory_data_analysis.ipynb
-│   ├── 02_location_optimization.ipynb
-│   ├── 03_route_clustering.ipynb
-│   └── 04_demand_forecasting.ipynb
-│
-├── data/
-│   ├── raw/
-│   ├── reference/
-│   └── processed/
-│
-└── results/
-    ├── final_shuttle_stops.csv
-    ├── shuttle_routes.csv
-    ├── headway_plan.csv
-    └── figures/
-```
-
-<br>
-
----
