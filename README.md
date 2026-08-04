@@ -53,7 +53,7 @@ The analysis combines location weighting, stop selection, route clustering, and 
 <br>
 
 <p align="center">
-  <img src="images/analsis-pipeline.png" alt="Analysis Pipeline" width="900">
+  <img src="images/analysis-pipeline.png" alt="Analysis Pipeline" width="900">
 </p>
 
 <br>
@@ -73,8 +73,6 @@ Selects shuttle stops that maximize passenger-demand coverage within a **400 m s
 Selects shuttle stops that minimize access distance while reflecting AHP-based location importance.
 
 <br>
-
----
 
 
 ---
