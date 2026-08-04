@@ -73,6 +73,41 @@ The analysis combines location weighting, stop selection, route clustering, and 
 
 ---
 
+
+
+## 🔍 Methodology
+
+
+<p align="center">
+  <img src="images/final-results-1.png" alt="final-procedure" width="900">
+</p>
+
+
+### 📍 MCLP 
+
+The **Maximal Covering Location Problem** selects a limited number of shuttle stops while maximizing weighted demand covered within a **400 m service radius**.
+The model was used to identify locations capable of serving the largest possible number of potential passengers.
+
+<br>
+
+
+
+### 📍 P-Median 
+
+
+The **P-Median model** selects a fixed number of shuttle stops while minimizing the total weighted distance between demand points and their assigned stops.
+The objective function was modified to jointly consider access distance and AHP-based location importance.
+
+
+<br>
+
+<p align="center">
+  <img src="images/final-results-2.png" alt="final-results" width="900">
+</p>
+
+
+---
+
 ## 📊 Results
 
 The final framework selected **22 shuttle stops** and organized them into **two routes** serving different areas around the festival venue.
