@@ -46,13 +46,14 @@ Exploratory analysis showed that visitor mobility increased sharply during the f
 
 ## 📚 Data Sources
 
-- `SKT Mobility Data` Administrative-district OD and stay-population data for analyzing visitor movement and time-based demand
-- `Local Government Open Data` Population, bus stop, tourist-attraction, and administrative-area data for evaluating candidate locations
-- `Transportation Card Big Data System` Stop-level boarding and alighting data for measuring public transportation demand
-- `Ministry of Land, Infrastructure and Transport` Administrative boundaries and cadastral data for GIS-based distance and coverage analysis
-- `Ministry of the Interior and Safety` Administrative-district codes for integrating datasets
-- `Regional Economy Portal` Festival-related social text data for examining perceptions of shuttle and parking services
-- 
+- <code>SKT Mobility Data</code> Administrative-district OD and stay-population data used to analyze visitor movement and time-based demand
+- <code>Local Government Open Data</code> Population, bus stop, tourist-attraction, and administrative-area data used to evaluate candidate locations
+- <code>Transportation Card Big Data System</code> Stop-level boarding and alighting data used to measure public transportation demand
+- <code>Ministry of Land, Infrastructure and Transport</code> Administrative boundaries and cadastral data used for GIS-based distance and coverage analysis
+- <code>Ministry of the Interior and Safety</code> Administrative-district codes used to integrate datasets
+- <code>Regional Economy Portal</code> Festival-related social text data used to examine perceptions of shuttle and parking services
+
+  
 <br>
 
 ---
