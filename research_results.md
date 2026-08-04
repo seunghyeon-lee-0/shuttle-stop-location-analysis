@@ -17,7 +17,7 @@ The final proposal selected **22 shuttle bus stops** and organized them into two
 - **Operating Strategy:** Flexible headways based on expected demand by time period
 
 <p align="center">
-  <img src="assets/images/final-results-2.png" alt="Final Shuttle Bus Operation Plan" width="900">
+  <img src="images/final-results-2.png" alt="Final Shuttle Bus Operation Plan" width="900">
 </p>
 
 <br>
@@ -37,19 +37,19 @@ MCLP incorporated AHP-based demand weights and selected stops that **maximized w
 P-Median assigned each demand point to a selected stop and **minimized the total demand-weighted travel distance** between demand points and shuttle stops.
 
 <p align="center">
-  <img src="assets/images/results-1.png" alt="Comparison of MCLP and P-Median" width="900">
+  <img src="images/results-1.png" alt="Comparison of MCLP and P-Median" width="900">
 </p>
 
 <br>
 
 <p align="center">
-  <img src="assets/images/results-2.png" alt="MCLP Methodology" width="900">
+  <img src="images/results-2.png" alt="MCLP Methodology" width="900">
 </p>
 
 <br>
 
 <p align="center">
-  <img src="assets/images/results-3.png" alt="P-Median Methodology" width="900">
+  <img src="images/results-3.png" alt="P-Median Methodology" width="900">
 </p>
 
 <br>
@@ -63,7 +63,7 @@ The MCLP and P-Median outputs were combined into a dataset of **43 candidate shu
 Candidates were ranked using AHP scores, demand coverage, distance efficiency, and whether they were selected by both models. A Greedy Algorithm then reduced spatial overlap and selected the final **22 shuttle stops**, balancing accessibility and operational efficiency.
 
 <p align="center">
-  <img src="assets/images/results-4.png" alt="Candidate Integration and Final Stop Selection" width="950">
+  <img src="images/results-4.png" alt="Candidate Integration and Final Stop Selection" width="950">
 </p>
 
 <br>
@@ -80,7 +80,7 @@ The final stops were grouped according to service zones and spatial connectivity
 The two routes connect all 22 selected stops while maintaining accessibility to the festival venue and minimizing unnecessary travel.
 
 <p align="center">
-  <img src="assets/images/results-5.png" alt="Final Shuttle Bus Routes" width="950">
+  <img src="images/results-5.png" alt="Final Shuttle Bus Routes" width="950">
 </p>
 
 <br>
@@ -94,7 +94,7 @@ Instead of using a fixed schedule, the project proposed **flexible shuttle headw
 Headways were shortened during peak demand periods and extended during lower-demand periods. This strategy was designed to reduce passenger waiting time while minimizing unnecessary vehicle operations.
 
 <p align="center">
-  <img src="assets/images/final-results-2.png" alt="Service Zone Routes and Time-Based Headway Plan" width="950">
+  <img src="images/final-results-2.png" alt="Service Zone Routes and Time-Based Headway Plan" width="950">
 </p>
 
 <br>
