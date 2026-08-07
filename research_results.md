@@ -28,6 +28,7 @@ The final proposal selected **22 shuttle bus stops** and organized them into two
 
 Two location optimization models were applied to balance **demand coverage** and **user accessibility** within a limited number of shuttle stops.
 
+<br>
 
 <p align="center">
   <img src="images/results-1.png" alt="Comparison of MCLP and P-Median" width="900">
@@ -35,7 +36,7 @@ Two location optimization models were applied to balance **demand coverage** and
 
 <br>
 
-### MCLP
+### 📍 MCLP
 
 
 MCLP incorporated AHP-based demand weights and selected stops that **maximized weighted demand coverage within a 400 m service radius**.
@@ -49,7 +50,7 @@ MCLP incorporated AHP-based demand weights and selected stops that **maximized w
 
 <br>
 
-### P-Median
+### 📍 P-Median
 
 P-Median assigned each demand point to a selected stop and **minimized the total demand-weighted travel distance** between demand points and shuttle stops.
 
