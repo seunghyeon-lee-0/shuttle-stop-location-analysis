@@ -8,16 +8,16 @@ AHP was used to construct demand weights, while **MCLP** and **P-Median** were a
 
 ---
 
-## 1. Final Proposal
+## 1. Analysis Pipeline
 
-The final proposal selected **22 shuttle bus stops** and organized them into two service zones.
+This project developed a data-driven shuttle bus operating plan to reduce traffic congestion during a local festival.
 
-- **Service Zone 1:** 15.7 km, approximately 35 minutes
-- **Service Zone 2:** 16 km, approximately 45 minutes
-- **Operating Strategy:** Flexible headways based on expected demand by time period
+The analysis followed an end-to-end pipeline, from identifying spatial demand to selecting shuttle stops and designing operational routes.
+
+
 
 <p align="center">
-  <img src="images/final-results-2.png" alt="Final Shuttle Bus Operation Plan" width="900">
+  <img src="images/final-results-1.png" alt="Final Shuttle Bus Operation Plan" width="900">
 </p>
 
 <br>
