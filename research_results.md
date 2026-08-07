@@ -14,6 +14,7 @@ This project developed a data-driven shuttle bus operating plan to reduce traffi
 
 The analysis followed an end-to-end pipeline, from identifying spatial demand to selecting shuttle stops and designing operational routes.
 
+<br>
 
 
 <p align="center">
