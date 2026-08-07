@@ -28,13 +28,6 @@ The final proposal selected **22 shuttle bus stops** and organized them into two
 
 Two location optimization models were applied to balance **demand coverage** and **user accessibility** within a limited number of shuttle stops.
 
-### MCLP
-
-MCLP incorporated AHP-based demand weights and selected stops that **maximized weighted demand coverage within a 400 m service radius**.
-
-### P-Median
-
-P-Median assigned each demand point to a selected stop and **minimized the total demand-weighted travel distance** between demand points and shuttle stops.
 
 <p align="center">
   <img src="images/results-1.png" alt="Comparison of MCLP and P-Median" width="900">
@@ -42,9 +35,23 @@ P-Median assigned each demand point to a selected stop and **minimized the total
 
 <br>
 
+### MCLP
+
+
+MCLP incorporated AHP-based demand weights and selected stops that **maximized weighted demand coverage within a 400 m service radius**.
+
+<br>
+
+
 <p align="center">
   <img src="images/results-2.png" alt="MCLP Methodology" width="900">
 </p>
+
+<br>
+
+### P-Median
+
+P-Median assigned each demand point to a selected stop and **minimized the total demand-weighted travel distance** between demand points and shuttle stops.
 
 <br>
 
@@ -98,18 +105,3 @@ Headways were shortened during peak demand periods and extended during lower-dem
 </p>
 
 <br>
-
----
-
-## 6. Key Outcomes
-
-The project produced the following operational plan:
-
-- AHP-based demand weighting and location evaluation
-- Weighted demand coverage maximization using MCLP
-- Demand-to-stop distance minimization using P-Median
-- Integration of 43 candidates into 22 final shuttle stops
-- Design of two service-zone shuttle routes
-- Flexible headway planning based on time-dependent demand
-
-Overall, the proposed framework provides a data-driven shuttle bus system that balances **public coverage, user accessibility, spatial efficiency, and operational feasibility**.
